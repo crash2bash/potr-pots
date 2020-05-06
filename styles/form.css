@@ -1,0 +1,333 @@
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Bebas Neue Bold";
+  src: url("../fonts/BebasNeueBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url("../fonts/ProximaNova-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal; }
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+.form {
+  width: 100%; }
+  .form--checkout {
+    width: 260px;
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      .form--checkout {
+        width: 544px;
+        margin: 0 0 0 69px; } }
+    @media (min-width: 1440px) {
+      .form--checkout {
+        width: 624px;
+        margin-left: 76px; } }
+  .form__input {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    outline: none; }
+    @media (min-width: 768px) {
+      .form__input {
+        width: 340px;
+        margin-bottom: 25px; } }
+    @media (min-width: 1440px) {
+      .form__input {
+        margin-bottom: 20px; } }
+    .form__input:hover, .form__input:focus {
+      border-bottom: 1px solid black; }
+    .form__input::-webkit-input-placeholder {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: #4f4f4f; }
+    .form__input::-moz-placeholder {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: #4f4f4f; }
+    .form__input:-ms-input-placeholder {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: #4f4f4f; }
+    .form__input::-ms-input-placeholder {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: #4f4f4f; }
+    .form__input::placeholder {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: #4f4f4f; }
+    .form__input--checkout {
+      width: 240px;
+      display: block;
+      margin: 0 0 25px;
+      padding: 10px 20px; }
+      @media (min-width: 768px) {
+        .form__input--checkout {
+          margin: 0; } }
+      @media (min-width: 1440px) {
+        .form__input--checkout {
+          width: 270px; } }
+    .form__input--payment {
+      width: auto;
+      margin: 0; }
+    .form__input--pay {
+      width: 260px;
+      margin: 0;
+      padding: 6px 17px; }
+      @media (min-width: 768px) {
+        .form__input--pay {
+          width: 360px; } }
+      @media (min-width: 1440px) {
+        .form__input--pay {
+          width: 400px; } }
+      .form__input--pay::-webkit-input-placeholder {
+        text-transform: uppercase; }
+      .form__input--pay::-moz-placeholder {
+        text-transform: uppercase; }
+      .form__input--pay:-ms-input-placeholder {
+        text-transform: uppercase; }
+      .form__input--pay::-ms-input-placeholder {
+        text-transform: uppercase; }
+      .form__input--pay::placeholder {
+        text-transform: uppercase; }
+    @media (min-width: 768px) {
+      .form__input--first-name {
+        grid-column: 1;
+        grid-row: 1; } }
+    @media (min-width: 768px) {
+      .form__input--last-name {
+        grid-column: 2;
+        grid-row: 1; } }
+    @media (min-width: 768px) {
+      .form__input--email {
+        width: 500px;
+        grid-column: 1;
+        grid-row: 2; } }
+    @media (min-width: 1440px) {
+      .form__input--email {
+        width: 570px; } }
+    @media (min-width: 768px) {
+      .form__input--street {
+        grid-column: 1;
+        grid-row: 3; } }
+    @media (min-width: 768px) {
+      .form__input--city {
+        grid-column: 2;
+        grid-row: 3; } }
+    @media (min-width: 768px) {
+      .form__input--house {
+        grid-column: 1;
+        grid-row: 4; } }
+    .form__input--outer {
+      margin-bottom: 31px; }
+      @media (min-width: 768px) {
+        .form__input--outer {
+          margin-bottom: 35px; } }
+      @media (min-width: 768px) {
+        .form__input--outer {
+          margin-bottom: 59px; } }
+  .form__fieldset {
+    margin: 0;
+    padding: 0;
+    border: none; }
+    .form__fieldset--outer {
+      margin-bottom: 99px; }
+    .form__fieldset--out {
+      margin-bottom: 56px; }
+  @media (min-width: 768px) {
+    .form__checkout-wrapper {
+      width: 500px;
+      display: grid;
+      grid-template-columns: repeat(2, 240px);
+      grid-template-rows: repeat(4, 70px);
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: end;
+      margin-left: auto; } }
+  @media (min-width: 1440px) {
+    .form__checkout-wrapper {
+      width: 570px;
+      grid-template-columns: repeat(2, 270px); } }
+  .form__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 52px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px; }
+  .form__title-value {
+    display: block;
+    margin-right: 20px;
+    width: 24px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    line-height: 25px;
+    text-align: center; }
+    @media (min-width: 1440px) {
+      .form__title-value {
+        margin-right: 30px; } }
+  .form__select {
+    display: block;
+    width: 240px;
+    padding: 10px 20px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    color: #4f4f4f; }
+    @media (min-width: 768px) {
+      .form__select {
+        grid-column: 2;
+        grid-row: 4; } }
+    @media (min-width: 1440px) {
+      .form__select {
+        width: 270px; } }
+  .form__label--payment {
+    width: 260px;
+    margin-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 11px 0;
+    color: #828282; }
+    @media (min-width: 768px) {
+      .form__label--payment {
+        width: 247px; } }
+  .form__label--payment-paypal {
+    width: 120px; }
+  .form__label--outer {
+    display: block;
+    margin-bottom: 40px; }
+    @media (min-width: 768px) {
+      .form__label--outer {
+        margin-bottom: 30px; } }
+  @media (min-width: 768px) {
+    .form__label--name {
+      width: 480px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; } }
+  @media (min-width: 1440px) {
+    .form__label--name {
+      width: 570px; } }
+  @media (min-width: 768px) {
+    .form__label--card {
+      width: 480px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; } }
+  @media (min-width: 1440px) {
+    .form__label--card {
+      width: 570px; } }
+  .form__label-wrapper {
+    width: 260px;
+    margin: 0 auto 37px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px solid #bdbdbd; }
+    @media (min-width: 768px) {
+      .form__label-wrapper {
+        width: 500px; } }
+    @media (min-width: 1440px) {
+      .form__label-wrapper {
+        width: 570px;
+        margin: 0 0 37px auto; } }
+  .form__icon--master {
+    width: 34px;
+    height: 22px;
+    background-image: url(../images/master.png); }
+  .form__icon--visa {
+    width: 37px;
+    height: 24px;
+    background-image: url(../images/visa.png); }
+  .form__icon--paypal {
+    width: 21px;
+    height: 21px;
+    background-image: url(../images/paypal.png); }
+  .form__amount {
+    width: 215px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 40px; }
+    @media (min-width: 768px) {
+      .form__amount {
+        margin-bottom: 30px; } }
+    @media (min-width: 1440px) {
+      .form__amount {
+        width: 235px;
+        margin-bottom: 27px; } }
+
+/*# sourceMappingURL=form.css.map */

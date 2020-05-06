@@ -1,0 +1,217 @@
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Bebas Neue Bold";
+  src: url("../fonts/BebasNeueBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url("../fonts/ProximaNova-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal; }
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+.header {
+  position: relative;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .header {
+      background-image: url(../images/headerbg_tablet.svg);
+      background-repeat: no-repeat; } }
+  @media (min-width: 1440px) {
+    .header {
+      background-image: url(../images/bgyellow_desktop.svg); } }
+  @media (min-width: 768px) {
+    .header__wrapper {
+      display: grid;
+      grid-template-columns: 379px 306px;
+      grid-template-rows: 65px 316px 48px;
+      gap: 56px 15px;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  @media (min-width: 1440px) {
+    .header__wrapper {
+      width: 1170px;
+      margin: 0 auto;
+      padding-top: 15px;
+      grid-template-columns: 133px 469px 48px;
+      grid-template-rows: 48px 500px;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      gap: 78px 0; } }
+  .header__mobile {
+    width: 260px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto 15px;
+    padding: 15px 0 0; }
+    @media (min-width: 768px) {
+      .header__mobile {
+        width: 700px;
+        margin: 0 auto;
+        -ms-flex-item-align: end;
+            align-self: end; } }
+    @media (min-width: 1440px) {
+      .header__mobile {
+        width: 135px;
+        grid-column: 1;
+        align-self: center; } }
+  .header__container {
+    width: 260px;
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      .header__container {
+        width: 379px;
+        grid-column: 1;
+        grid-row: 2 / 3; } }
+    @media (min-width: 1440px) {
+      .header__container {
+        width: 451px;
+        margin: 0 0 0 100px;
+        grid-column: 1;
+        justify-self: start; } }
+  .header__link {
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #333;
+    cursor: default; }
+  .header__sandwich {
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/sandwich.png);
+    cursor: pointer; }
+    @media (min-width: 1440px) {
+      .header__sandwich {
+        display: none; } }
+  .header__basket-icon {
+    display: none;
+    border: none;
+    background-color: transparent;
+    outline: none; }
+    @media (min-width: 1440px) {
+      .header__basket-icon {
+        display: block;
+        grid-column: 3;
+        background-image: url(../images/basket.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out; }
+        .header__basket-icon:hover, .header__basket-icon:focus {
+          background-image: url(../images/shopping_bag.png); } }
+  .header__photo-container {
+    width: 320px;
+    height: 320px;
+    overflow: hidden; }
+    @media (min-width: 768px) {
+      .header__photo-container {
+        width: 306px;
+        height: 306px;
+        grid-column: 2;
+        grid-row: 2 / 3; } }
+    @media (min-width: 1440px) {
+      .header__photo-container {
+        width: 500px;
+        height: 500px;
+        grid-column: 3;
+        justify-self: end; } }
+    .header__photo-container--outer {
+      margin-bottom: 25px; }
+      @media (min-width: 768px) {
+        .header__photo-container--outer {
+          margin: 0; } }
+  .header__photo {
+    width: 100%;
+    height: auto;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
+    .header__photo:hover {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+  .header__title {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 21px;
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #03839e;
+    -webkit-text-stroke: 1px #03839e; }
+    @media (min-width: 768px) {
+      .header__title {
+        width: 461px;
+        margin: 0;
+        font-size: 64px;
+        line-height: 64px;
+        letter-spacing: 0.16em; } }
+  .header__price {
+    margin: 0;
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 26px;
+    line-height: 32px;
+    color: #333; }
+    @media (min-width: 768px) {
+      .header__price {
+        width: 139px;
+        margin-left: auto; } }
+  .header__text {
+    display: block;
+    width: 139px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #4f4f4f; }
+    @media (min-width: 768px) {
+      .header__text {
+        width: 139px;
+        margin-left: auto;
+        margin-bottom: 44px; } }
+  .header--outer {
+    margin-bottom: 102px; }
+    @media (min-width: 768px) {
+      .header--outer {
+        margin-bottom: 115px; } }
+    @media (min-width: 1440px) {
+      .header--outer {
+        margin-bottom: 150px; } }
+
+/*# sourceMappingURL=header.css.map */

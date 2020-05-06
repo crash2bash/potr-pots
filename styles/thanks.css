@@ -1,0 +1,108 @@
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Bebas Neue Bold";
+  src: url("../fonts/BebasNeueBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url("../fonts/ProximaNova-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal; }
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+.thanks {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 296px;
+  height: 376px;
+  margin: 0 auto;
+  padding: 10px 18px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 4;
+  background-color: #f8f8f8; }
+  @media (min-width: 768px) {
+    .thanks {
+      width: 700px;
+      height: 373px;
+      padding-right: 0;
+      padding-left: 0; } }
+  @media (min-width: 1440px) {
+    .thanks {
+      width: 830px;
+      height: 431px; } }
+  @media (min-width: 768px) {
+    .thanks__container {
+      margin-top: 34px;
+      margin-left: 120px; } }
+  @media (min-width: 1440px) {
+    .thanks__container {
+      margin-left: 130px; } }
+  .thanks__title {
+    margin: 0 0 59px 46px;
+    position: relative;
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: 700;
+    letter-spacing: 0.16em; }
+    @media (min-width: 768px) {
+      .thanks__title {
+        margin-bottom: 64px; } }
+    @media (min-width: 1440px) {
+      .thanks__title {
+        margin-bottom: 71px; } }
+    .thanks__title::before {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: -35px;
+      left: -46px;
+      border-radius: 50%;
+      background-color: #ffe339;
+      z-index: -1; }
+  .thanks__text {
+    width: 260px;
+    margin: 0 0 13px;
+    font-size: 24px;
+    line-height: 36px; }
+    @media (min-width: 768px) {
+      .thanks__text {
+        width: 528px;
+        margin-bottom: 19px;
+        font-size: 32px;
+        line-height: 48px;
+        font-weight: 600; } }
+    @media (min-width: 1440px) {
+      .thanks__text {
+        margin-bottom: 11px; } }
+  .thanks__details {
+    width: 260px;
+    margin: 0; }
+
+/*# sourceMappingURL=thanks.css.map */
