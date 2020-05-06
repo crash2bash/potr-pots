@@ -1,0 +1,357 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/extends";
+
+.form {
+  width: 100%;
+
+  &--checkout {
+    width: 260px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      width: 544px;
+      margin: 0 0 0 69px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 624px;
+      margin-left: 76px;
+    }
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 4px;
+
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+
+    transition: $transition-time ease-in-out;
+    outline: none;
+
+    @media (min-width: $tablet-width) {
+      width: 340px;
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 20px;
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid rgba(0, 0, 0, 1);
+    }
+
+    &::placeholder {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: $c-gray;
+    }
+
+    &--checkout {
+      width: 240px;
+      display: block;
+      margin: 0 0 25px;
+      padding: 10px 20px;
+
+      @media (min-width: $tablet-width) {
+        margin: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 270px;
+      }
+    }
+
+    &--payment {
+      width: auto;
+      margin: 0;
+    }
+
+    &--pay {
+      width: 260px;
+      margin: 0;
+      padding: 6px 17px;
+
+      @media (min-width: $tablet-width) {
+        width: 360px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 400px;
+      }
+
+      &::placeholder {
+        text-transform: uppercase;
+      }
+    }
+
+    &--first-name {
+      @media (min-width: $tablet-width) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+
+    &--last-name {
+      @media (min-width: $tablet-width) {
+        grid-column: 2;
+        grid-row: 1;
+      }
+    }
+
+    &--email {
+      @media (min-width: $tablet-width) {
+        width: 500px;
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 570px;
+      }
+    }
+
+    &--street {
+      @media (min-width: $tablet-width) {
+        grid-column: 1;
+        grid-row: 3;
+      }
+    }
+
+    &--city {
+      @media (min-width: $tablet-width) {
+        grid-column: 2;
+        grid-row: 3;
+      }
+    }
+
+    &--house {
+      @media (min-width: $tablet-width) {
+        grid-column: 1;
+        grid-row: 4;
+      }
+    }
+
+    &--outer {
+      margin-bottom: 31px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 35px;
+      }
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 59px;
+      }
+    }
+  }
+
+  &__fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    &--outer {
+      margin-bottom: 99px;
+    }
+
+    &--out {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__checkout-wrapper {
+
+    @media (min-width: $tablet-width) {
+      width: 500px;
+      display: grid;
+      grid-template-columns: repeat(2, 240px);
+      grid-template-rows: repeat(4, 70px);
+      justify-content: space-between;
+      align-items: end;
+      margin-left: auto;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 570px;
+      grid-template-columns: repeat(2, 270px);
+    }
+  }
+
+  &__title {
+    display: flex;
+    margin: 0 0 52px;
+    padding: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__title-value {
+    display: block;
+    margin-right: 20px;
+    width: 24px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: $c-light-black;
+    color: #fff;
+
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    line-height: 25px;
+    text-align: center;
+
+    @media (min-width: $desktop-width) {
+      margin-right: 30px;
+    }
+  }
+
+  &__select {
+    display: block;
+    width: 240px;
+    padding: 10px 20px;
+
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+
+    color: $c-gray;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 2;
+      grid-row: 4;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 270px;
+    }
+  }
+
+  &__label {
+
+    &--payment {
+      width: 260px;
+      margin-left: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 11px 0;
+
+      color: $c-caption;
+
+      @media (min-width: $tablet-width) {
+        width: 247px;
+      }
+    }
+
+    &--payment-paypal {
+      width: 120px;
+    }
+
+    &--outer {
+      display: block;
+      margin-bottom: 40px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &--name {
+
+      @media (min-width: $tablet-width) {
+        width: 480px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 570px;
+      }
+    }
+
+    &--card {
+
+      @media (min-width: $tablet-width) {
+        width: 480px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 570px;
+      }
+    }
+  }
+
+  &__label-wrapper {
+    width: 260px;
+    margin: 0 auto 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #bdbdbd;
+
+    @media (min-width: $tablet-width) {
+      width: 500px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 570px;
+      margin: 0 0 37px auto;
+    }
+  }
+
+  &__icon {
+    &--master {
+      width: 34px;
+      height: 22px;
+      background-image: url(../images/master.png);
+    }
+
+    &--visa {
+      width: 37px;
+      height: 24px;
+      background-image: url(../images/visa.png);
+    }
+
+    &--paypal {
+      width: 21px;
+      height: 21px;
+      background-image: url(../images/paypal.png);
+    }
+  }
+
+  &__amount {
+    width: 215px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 235px;
+      margin-bottom: 27px;
+    }
+  }
+}

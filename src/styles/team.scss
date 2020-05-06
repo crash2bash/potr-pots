@@ -1,0 +1,178 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/extends";
+
+.team {
+  overflow: hidden;
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: grid;
+    grid-template-columns: 347px 340px;
+    grid-template-rows: 58px 446px;
+    gap: 112px 47px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 471px 677px;
+    grid-template-rows: 58px 535px;
+    gap: 121px 57px;
+    overflow: visible;
+    padding: 0;
+  }
+
+  &__title {
+    width: $mobile-content-width;
+    margin: 0 auto 60px;
+
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 58px;
+    line-height: 58px;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    color: $c-light-black;
+
+    @media (min-width: $tablet-width) {
+      width: $tablet-content-width;
+      grid-column: 1 / 3;
+      margin: 0 0 0 34px;
+    }
+  }
+
+  &__image-container {
+    width: 320px;
+    height: 240px;
+    margin-bottom: 35px;
+    overflow: hidden;
+
+    @media (min-width: $tablet-width) {
+      width: 340px;
+      height: 255px;
+      margin: -50px 0 0;
+      grid-column: 2 / 3;
+      align-self: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 677px;
+      height: 507px;
+      align-self: end;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    transition: $transition-time ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__text-container {
+    padding-bottom: 55px;
+
+    background-image: url(../images/bg_yellow.svg);
+    background-repeat: no-repeat;
+    background-position: 0 98px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+      grid-column: 1 / 2;
+      grid-row: 2;
+      padding-bottom: 0;
+      background-image: url(../images/bg_yellow_tablet.png);
+      background-position: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: url(../images/teambg_desktop.svg);
+      background-position: top left;
+    }
+  }
+
+  &__text {
+    width: $mobile-content-width;
+    margin: 0 auto;
+    color: $c-gray;
+
+    @media (min-width: $tablet-width) {
+      width: 313px;
+      margin: 0 0 0 34px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 34px 0 0 135px;
+    }
+
+    &--outer {
+      margin-bottom: 30px;
+
+      @media (min-width: $tablet-width) {
+        margin: 120px 0 30px 34px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin: 168px 0 0 135px;
+      }
+    }
+  }
+
+  &__lead {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      font-family: "Bebas Neue Bold", sans-serif;
+      font-size: 232px;
+      line-height: 232px;
+      letter-spacing: 0.15em;
+      -webkit-text-stroke: 1px $c-blue;
+      color: transparent;
+    }
+
+    &--martin {
+      position: absolute;
+      margin-top: 70px;
+      margin-left: -44px;
+
+      @media (min-width: $desktop-width) {
+        margin-top: 80px;
+        margin-left: 74px;
+        font-size: 288px;
+        line-height: 288px;
+      }
+    }
+
+    &--andy {
+      position: absolute;
+      margin-top: 445px;
+      margin-left: 288px;
+
+      @media (min-width: $desktop-width) {
+        font-size: 288px;
+        line-height: 288px;
+        margin: 645px 0 0;
+        right: 0;
+      }
+    }
+  }
+
+  &--outer {
+    margin-bottom: 67px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 172px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 226px;
+    }
+  }
+}

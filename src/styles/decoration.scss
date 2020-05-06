@@ -1,0 +1,159 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/extends";
+
+.decoration {
+  position: absolute;
+  z-index: 3;
+
+  width: 144px;
+  height: 14px;
+
+  display: flex;
+  align-items: center;
+
+  transform: rotate(90deg);
+  cursor: default;
+
+  &--header {
+    width: 185px;
+    height: 18px;
+
+    top: 90%;
+    right: -70px;
+
+    @media (min-width: $tablet-width) {
+      top: 90%;
+      left: -50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 50px;
+    }
+  }
+
+  &--header-right {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      top: 125%;
+      right: -50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 135%;
+      right: -30px;
+    }
+  }
+
+  &--materials-right {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      top: 10%;
+      right: -50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--materials-left {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      top: 40%;
+      left: -55px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--order {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      top: 0;
+      right: -50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 150px;
+    }
+  }
+
+  &--about-bottom {
+    top: 80px;
+    right: -85px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin: 0;
+
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 700;
+
+    color: $c-caption;
+
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -45px;
+      transform: translate(0, -50%) rotate(-90deg);
+
+      height: 65px;
+      width: 1px;
+
+      background-color: $c-caption;
+    }
+
+    &--header {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: normal;
+
+      color: $c-blue;
+
+      text-transform: none;
+      letter-spacing: normal;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 45px;
+        width: 8px;
+        top: 50%;
+        left: 130%;
+        transform: translate(-130%, -50%) rotate(-90deg);
+
+        background-image: url(../images/arrow_decoration.svg);
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

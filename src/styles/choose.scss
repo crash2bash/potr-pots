@@ -1,0 +1,179 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/extends";
+
+.choose {
+
+  &__title {
+    width: $mobile-content-width;
+    margin: 0 auto 30px;
+
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 36px;
+    line-height: 54px;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      width: $tablet-content-width;
+      margin-bottom: 29px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: $desktop-content-width;
+      margin-bottom: 56px;
+    }
+  }
+
+  &__container {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-areas: "text-main text-main"
+        "list image"
+        "text-inner text-inner";
+    }
+
+    @media (min-width: $desktop-width) {
+      width: $desktop-content-width;
+      margin: 0 auto;
+      grid-template-areas: "text-main list image"
+        ". list image"
+        "text-inner text-inner image";
+    }
+  }
+
+  &__text {
+    position: relative;
+    width: 260px;
+    margin: 0 auto;
+
+    color: $c-gray;
+
+    @media (min-width: $tablet-width) {
+      width: $tablet-content-width;
+    }
+
+    &--main {
+      @media (min-width: $tablet-width) {
+        width: 579px;
+        grid-area: text-main;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 253px;
+      }
+    }
+
+    &--inner {
+      @media (min-width: $tablet-width) {
+        grid-area: text-inner;
+      }
+    }
+
+    &--list {
+      width: 246px;
+      margin: 0;
+    }
+
+    &--bold {
+      font-family: "Proxima Nova Bold", sans-serif;
+    }
+
+    &--pseudo::before {
+      content: "*";
+      position: absolute;
+      margin-left: -7px;
+    }
+
+    &--outer {
+      margin-bottom: 32px;
+
+      @media (min-width: $tablet-content-width) {
+        margin: 0 0 18px 34px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin: 32px 0 0;
+      }
+    }
+  }
+
+  &__image {
+    width: 320px;
+    height: 259px;
+    margin-bottom: 40px;
+
+    @media (min-width: $tablet-width) {
+      width: 416px;
+      height: 337px;
+      grid-area: image;
+      margin: 0 36px 26px 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 528px;
+      height: 427px;
+      margin: 0;
+    }
+  }
+
+  &__list {
+    width: 260px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $tablet-width) {
+      grid-area: list;
+      margin: 21px 0 0 34px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 32px 0 0;
+    }
+
+    &--outer {
+      margin-bottom: 40px;
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item--outer {
+    margin-bottom: 40px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 69px;
+    }
+  }
+
+  &__item-tittle {
+    margin: 0;
+
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+  }
+
+  &--outer {
+    margin-bottom: 98px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 120px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/extends";
+
+.features {
+  width: $mobile-content-width;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-content-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-content-width;
+  }
+
+  &__title {
+    margin: 0 0 50px;
+
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 58px;
+    line-height: 58px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    -webkit-text-stroke: 1px $c-blue;
+    color: $c-blue;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 52px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 77px;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(3, 220px);
+      gap: 0 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(3, 370px);
+      gap: 0 30px;
+    }
+  }
+
+  &__item {
+
+    &--first {
+      order: 2;
+
+      @media (min-width: $desktop-width) {
+        order: 1;
+      }
+    }
+
+    &--second {
+      order: 3;
+
+      @media (min-width: $desktop-width) {
+        order: 2;
+      }
+    }
+
+    &--third {
+      @media (min-width: $desktop-width) {
+        order: 3;
+      }
+    }
+
+    &--outer {
+      margin-bottom: 70px;
+
+      @media (min-width: $tablet-width) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__image-container {
+    width: 260px;
+    height: 258px;
+    margin-bottom: 37px;
+
+    overflow: hidden;
+
+    @media (min-width: $tablet-width) {
+      width: 220px;
+      height: 218px;
+      margin-bottom: 33px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 370px;
+      height: 366px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    transition: $transition-time ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__inner-title {
+    margin: 0 0 22px;
+
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+
+    text-align: center;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    color: $c-light-black;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    color: $c-gray;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+    }
+  }
+
+  &--outer {
+    margin-bottom: 95px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 148px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 126px;
+    }
+  }
+}

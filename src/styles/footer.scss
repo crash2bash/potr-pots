@@ -1,0 +1,141 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/extends";
+
+.footer {
+  width: $mobile-content-width;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-content-width;
+    display: grid;
+    grid-template-columns: 140px 220px 128px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-content-width;
+  }
+
+  &__address {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      grid-column: 1;
+    }
+  }
+
+  &__about {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      grid-column: 3;
+    }
+  }
+
+  &__socials-list {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+
+    @media (min-width: $tablet-width) {
+      width: 220px;
+      align-self: start;
+      margin-top: 10px;
+      grid-column: 2;
+    }
+
+    &--outer {
+      margin-bottom: 41px;
+    }
+  }
+
+  &__socials-image {
+    transition: $transition-time ease-in-out;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+  }
+
+  &__socials-link {
+    outline: none;
+
+    &:hover .footer__socials-image {
+      transform: scale(1.2);
+    }
+
+    &:focus .footer__socials-image {
+      transform: scale(1.2);
+    }
+  }
+
+  &__title-container {
+    width: 170px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 2;
+      margin-top: -60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 1px;
+
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 36px;
+    line-height: 54px;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 24px;
+      margin-bottom: 11px;
+    }
+
+    &--potr {
+      @media (min-width: $tablet-width) {
+        font-size: 36px;
+        line-height: 54px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    &--copyright {
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+  }
+
+  &--outer {
+    margin-bottom: 50px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 64px;
+    }
+  }
+}

@@ -1,7 +1,90 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "header";
+@import "navigation";
+@import "mobile-nav";
+@import "decoration";
+@import "text-stroke";
+@import "button";
+@import "about";
+@import "features";
+@import "team";
+@import "materials";
+@import "choose";
+@import "order";
+@import "question";
+@import "form";
+@import "footer";
+@import "shopping";
+@import "checkout";
+@import "thanks";
+@import "visually-hidden";
+
+html {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+
+  scroll-behavior: smooth;
+}
 
 body {
-  background: $c-gray;
+  width: 320px;
+  margin: 0 auto;
+
+  background-color: $c-main;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#000, 0.6);
+}
+
+.show {
+  display: block;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }

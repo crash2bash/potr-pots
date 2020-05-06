@@ -1,0 +1,242 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/extends";
+
+.header {
+  position: relative;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    background-image: url(../images/headerbg_tablet.svg);
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url(../images/bgyellow_desktop.svg);
+  }
+
+  &__wrapper {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 379px 306px;
+      grid-template-rows: 65px 316px 48px;
+      gap: 56px 15px;
+      justify-content: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: $desktop-content-width;
+      margin: 0 auto;
+      padding-top: 15px;
+      grid-template-columns: 133px 469px 48px;
+      grid-template-rows: 48px 500px;
+      justify-content: space-between;
+      gap: 78px 0;
+    }
+  }
+
+  &__mobile {
+    width: $mobile-content-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 15px;
+    padding: 15px 0 0;
+
+    @media (min-width: $tablet-width) {
+      width: $tablet-content-width;
+      margin: 0 auto;
+      align-self: end;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 135px;
+      grid-column: 1;
+      align-self: center;
+    }
+  }
+
+  &__container {
+    width: $mobile-content-width;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      width: 379px;
+      grid-column: 1;
+      grid-row: 2 / 3;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 451px;
+      margin: 0 0 0 100px;
+      grid-column: 1;
+      justify-self: start;
+    }
+  }
+
+  &__link {
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+    color: $c-light-black;
+    cursor: default;
+  }
+
+  &__sandwich {
+    width: 32px;
+    height: 32px;
+
+    background-image: url(../images/sandwich.png);
+    cursor: pointer;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &__basket-icon {
+    display: none;
+    border: none;
+    background-color: transparent;
+    outline: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      grid-column: 3;
+
+      background-image: url(../images/basket.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 48px;
+      height: 48px;
+
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+
+      &:hover,
+      &:focus {
+        background-image: url(../images/shopping_bag.png);
+      }
+    }
+  }
+
+  &__photo-container {
+    width: 320px;
+    height: 320px;
+
+    overflow: hidden;
+
+    @media (min-width: $tablet-width) {
+      width: 306px;
+      height: 306px;
+      grid-column: 2;
+      grid-row: 2 / 3;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 500px;
+      height: 500px;
+      grid-column: 3;
+      justify-self: end;
+    }
+
+    &--outer {
+      margin-bottom: 25px;
+
+      @media (min-width: $tablet-width) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    height: auto;
+
+    transition: $transition-time ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 21px;
+
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+    color: $c-blue;
+    -webkit-text-stroke: 1px $c-blue;
+
+    @media (min-width: $tablet-width) {
+      width: 461px;
+      margin: 0;
+
+      font-size: 64px;
+      line-height: 64px;
+
+      letter-spacing: 0.16em;
+    }
+  }
+
+  &__price {
+    margin: 0;
+
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 26px;
+    line-height: 32px;
+
+    color: $c-light-black;
+
+    @media (min-width: $tablet-width) {
+      width: 139px;
+      margin-left: auto;
+    }
+  }
+
+  &__text {
+    display: block;
+    width: 139px;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 21px;
+
+    color: $c-gray;
+
+    @media (min-width: $tablet-width) {
+      width: 139px;
+      margin-left: auto;
+      margin-bottom: 44px;
+    }
+  }
+
+  &--outer {
+    margin-bottom: 102px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 115px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 150px;
+    }
+  }
+}

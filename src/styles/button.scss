@@ -1,0 +1,227 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/extends";
+
+.button {
+  width: 100%;
+  box-sizing: border-box;
+  text-transform: uppercase;
+
+  transition: 0.3s ease-in-out;
+
+  cursor: pointer;
+
+  &--buy {
+    position: relative;
+    width: 238px;
+    height: 48px;
+    padding: 0 101px 0 62px;
+
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+
+    background-color: #ffe339;
+    color: #121212;
+    border: 1px solid #ffe339;
+    outline: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 70%;
+      transform: translate(-70%, -50%);
+
+      width: 26px;
+      height: 8px;
+
+      background-image: url(../images/button_arrow.svg);
+      transition: $transition-time ease-in-out;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+
+      &::after {
+        background-image: url(../images/button_arrow_hover.svg);
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+      border: 1px solid $c-blue;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $c-blue;
+        color: #fff;
+      }
+    }
+  }
+
+  &--header {
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      margin-left: auto;
+      margin-right: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 70px;
+    }
+  }
+
+  &--order {
+    &--outer {
+      margin-bottom: 40px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 33px;
+      }
+    }
+  }
+
+  &--form {
+    position: relative;
+    display: block;
+    width: 50px;
+    margin: 0 auto;
+    padding: 0;
+
+    font-family: "Proxima Nova Bold", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+
+    border: none;
+    background-color: transparent;
+
+    text-transform: none;
+
+    color: $c-light-black;
+    transition: $transition-time ease-in-out;
+    outline: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+
+      border-radius: 2px;
+      background-color: $c-light-black;
+
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+      transform: translateY(10px);
+    }
+
+    &:hover::after,
+    &:focus::after,
+    &:active::after {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &--checkout {
+    display: block;
+    width: 238px;
+    height: 48px;
+
+    font-size: 14px;
+    line-height: 48px;
+    font-weight: 600;
+
+    text-align: center;
+    text-decoration: none;
+    color: #121212;
+    border: 1px solid $c-select;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: center;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $c-blue;
+      background-color: $c-blue;
+      color: $c-main;
+    }
+  }
+
+  &--payment {
+    display: block;
+    width: 231px;
+    height: 48px;
+
+    font-size: 14px;
+    line-height: 48px;
+    font-weight: 600;
+
+    text-align: center;
+    text-decoration: none;
+    color: #121212;
+    border: 1px solid $c-select;
+
+    &--outer {
+      margin-bottom: 101px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 83px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: 95px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $c-blue;
+      background-color: $c-blue;
+      color: $c-main;
+    }
+  }
+
+  &--up {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    top: 83%;
+    right: 70%;
+    width: 24px;
+    height: 20px;
+    padding: 25px;
+    border: none;
+    outline: none;
+
+    background-image: url(../images/arrow-up.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      top: 80%;
+      left: 80%;
+    }
+
+    &:hover {
+      animation: rubberBand 0.75s;
+    }
+  }
+}

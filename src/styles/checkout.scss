@@ -1,0 +1,49 @@
+@import "utils";
+@import "fonts";
+@import "typography";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/extends";
+
+.checkout {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 296px;
+  margin: 0 auto;
+  padding-top: 10px;
+  z-index: 4;
+
+  background-color: $c-main;
+
+  @media (min-width: $tablet-width) {
+    width: 725px;
+    padding-top: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 830px;
+    padding-top: 30px;
+  }
+
+  &__title {
+    width: 260px;
+    margin: 0 auto 39px;
+    font-family: "Bebas Neue Bold", sans-serif;
+    font-size: 36px;
+    line-height: 54px;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      width: 500px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 570px;
+    }
+  }
+}
